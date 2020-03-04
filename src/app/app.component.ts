@@ -22,11 +22,9 @@ export class AppComponent {
       profile: [this.compareValue.profile, [Validators.required, Validators.minLength(10)]]
     });
   }
-  save() {
-    console.log("save called");
+  
+  onChange() {
     this.updatedValues = this.getUpdatedValues(this.userForm, this.compareValue);
-    //return updatedValues; 
-    console.log("updatedValues",this.updatedValues);
   }
 
   getUpdatedValues = (form: any, compareValue?: any) => {
